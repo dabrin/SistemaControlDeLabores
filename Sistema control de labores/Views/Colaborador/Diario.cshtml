@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Diario";
+}
+
+@{ 
+    //Primero obtenemos el día actual
+    DateTime date = DateTime.Now;
+
+    //Asi obtenemos el primer dia del mes actual
+    DateTime oPrimerDiaDelMes =new  DateTime(date.Year, date.Month, 1);
+
+    //Y de la siguiente forma obtenemos el ultimo dia del mes
+    //agregamos 1 mes al objeto anterior y restamos 1 día.
+    DateTime oUltimoDiaDelMes = oPrimerDiaDelMes.AddMonths(1).AddDays(-1);
+    int ultDia = oUltimoDiaDelMes.Day;
+}
+
+<h2>@ultDia</h2>
+
+<div class="section container">
+    <div class="row col s12">
+        <table class="responsive-table">
+            <tr>
+                <th>Procesos</th>
+                <th>D&iacute;a</th>
+                @for (int i = 1; i <= ultDia; i++)
+                {
+                    <th>@i</th>
+                   
+                }
+            </tr>
+            @for(int i=0;i<ultDia;i++)
+            {
+                <tr>
+                    <td>F</td>
+                    
+                </tr>
+
+            }
+        </table>
+    </div>
+
+</div>
+
+
+

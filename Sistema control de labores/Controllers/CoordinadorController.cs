@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Sistema_control_de_labores.Models;
+using Sistema_control_de_labores.Models.ViewModel;
 namespace Sistema_control_de_labores.Controllers
 {
     public class CoordinadorController : Controller
     {
+
+
         public ActionResult CrearReporte()
         {
             return View();
@@ -85,8 +88,6 @@ namespace Sistema_control_de_labores.Controllers
             }
 
 
-
-
             //return View();
         }
 
@@ -99,12 +100,6 @@ namespace Sistema_control_de_labores.Controllers
 
             return resultado;
         }
-
-
-    }
-}
-
-
 
     }
 }
